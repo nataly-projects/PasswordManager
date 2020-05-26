@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, PassActivity.class);
                 intent.putStringArrayListExtra("categoryList", (ArrayList<String>) categoryNameList);
+                intent.putExtra("activity", "main");
                 startActivityForResult(intent, INTENT_REQUEST_CODE);
             }
         });

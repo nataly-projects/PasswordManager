@@ -119,11 +119,15 @@ public class PassActivity extends AppCompatActivity implements AdapterView.OnIte
         final Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
+        if(bundle.getString("activity").equals("detail")){
+            TextView mainTitle = findViewById(R.id.enter_item);
+            mainTitle.setText("Edit Item");
+        }
+
         if(bundle != null) {
             itemId = bundle.getString("id");
             titleLayout.getEditText().setText(bundle.getString("title"));
-            TextView mainTitle = findViewById(R.id.enter_item);
-            mainTitle.setText("Edit Item");
+
             usernameLayout.getEditText().setText(bundle.getString("username"));
             passwordLayout.getEditText().setText(bundle.getString("password"));
             categorySpinnerChoose = bundle.getString("category");

@@ -91,6 +91,7 @@ public class DetailActivity extends AppCompatActivity {
                 Intent intent = new Intent(DetailActivity.this, PassActivity.class);
 
                 intent.putExtra("id", itemId);
+                intent.putExtra("activity", "detail");
                 intent.putExtra("title", title.getText().toString());
                 intent.putExtra("username", username.getText().toString());
                 intent.putExtra("password", pass.getText().toString());
